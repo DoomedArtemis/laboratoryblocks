@@ -5,7 +5,7 @@ Get ready to upgrade your builds! This mod adds modern and futuristic looking la
 
 ## Supported Connected Textures Mod
 * CTM | 1.18 - 1.19
-* Fusion | 1.20
+* Fusion | 1.20 - 1.21
 
 ## Acknowledgments
 * This project uses sound files from the [Chisel Github Repository](https://github.com/Chisel-Team/Chisel)

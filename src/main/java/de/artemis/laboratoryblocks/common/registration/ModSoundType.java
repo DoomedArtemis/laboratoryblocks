@@ -1,10 +1,11 @@
 package de.artemis.laboratoryblocks.common.registration;
 
-import net.minecraftforge.common.util.ForgeSoundType;
+import net.minecraft.world.level.block.SoundType;
+import net.neoforged.neoforge.common.util.DeferredSoundType;
 
 public class ModSoundType {
 
-    public static final ForgeSoundType LABORATORY_BLOCK = new ForgeSoundType(1.0F, 1.0F,
+    public static final SoundType LABORATORY_BLOCK = new DeferredSoundType(1.0F, 1.0F,
             ModSoundEvents.LABORATORY_BLOCK_BREAK,
             ModSoundEvents.LABORATORY_BLOCK_STEP,
             ModSoundEvents.LABORATORY_BLOCK_PLACE,

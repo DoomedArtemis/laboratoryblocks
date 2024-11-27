@@ -102,9 +102,9 @@
   "item.laboratoryblocks.starch": "Starch",
   "itemGroup.laboratoryblocks": "Artemis' Laboratory Blocks",
   "keybind.laboratoryblocks.category": "Artemis' Laboratory Blocks",
-  "keybind.laboratoryblocks.remove_glowstone_configuration_tool_action": "Remove Glowstone with Configuration Tool",
-  "keybind.laboratoryblocks.remove_redstone_configuration_tool_action": "Remove Redstone with Configuration Tool",
-  "keybind.laboratoryblocks.show_information": "Show information",
-  "tooltip.laboratoryblocks.configuration_tool": "Press %s to remove Glowstone Particles and %s Right Click to remove Redstone Particles.",
-  "tooltip.laboratoryblocks.configuration_tool_preview": "Hold %s for details."
+  "tooltip.laboratoryblocks.configuration_tool.state.remove_glowstone": "Remove Glowstone",
+  "tooltip.laboratoryblocks.configuration_tool.state.remove_redstone": "Remove Redstone",
+  "tooltip.laboratoryblocks.configuration_tool.state.reverse_redstone_control": "Reverse Redstone Control",
+  "tooltip.laboratoryblocks.configuration_tool_1": "Current mode: %s.",
+  "tooltip.laboratoryblocks.configuration_tool_2": "Crouch-Right-Click to cycle modes."
 }

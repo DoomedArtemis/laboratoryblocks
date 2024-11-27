@@ -5,7 +5,7 @@ import de.artemis.laboratoryblocks.common.registration.ModBlocks;
 import de.artemis.laboratoryblocks.common.registration.ModItems;
 import net.minecraft.data.PackOutput;
 
-public class LanguageProvider extends net.minecraftforge.common.data.LanguageProvider {
+public class LanguageProvider extends net.neoforged.neoforge.common.data.LanguageProvider {
     public LanguageProvider(PackOutput packOutput, String locale) {
         super(packOutput, LaboratoryBlocks.MOD_ID, locale);
     }
@@ -15,12 +15,11 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
         add("itemGroup.laboratoryblocks", "Artemis' Laboratory Blocks");
         add("keybind.laboratoryblocks.category", "Artemis' Laboratory Blocks");
 
-        add("tooltip.laboratoryblocks.configuration_tool", "Press %s to remove Glowstone Particles and %s Right Click to remove Redstone Particles.");
-        add("tooltip.laboratoryblocks.configuration_tool_preview", "Hold %s for details.");
-
-        add("keybind.laboratoryblocks.remove_redstone_configuration_tool_action", "Remove Redstone with Configuration Tool");
-        add("keybind.laboratoryblocks.remove_glowstone_configuration_tool_action", "Remove Glowstone with Configuration Tool");
-        add("keybind.laboratoryblocks.show_information", "Show information");
+        add("tooltip.laboratoryblocks.configuration_tool_1", "Current mode: %s.");
+        add("tooltip.laboratoryblocks.configuration_tool_2", "Crouch-Right-Click to cycle modes.");
+        add("tooltip.laboratoryblocks.configuration_tool.state.remove_glowstone", "Remove Glowstone");
+        add("tooltip.laboratoryblocks.configuration_tool.state.remove_redstone", "Remove Redstone");
+        add("tooltip.laboratoryblocks.configuration_tool.state.reverse_redstone_control", "Reverse Redstone Control");
 
         add(ModItems.STARCH.get(), "Starch");
         add(ModItems.COMPRESSED_STARCH.get(), "Compressed Starch");

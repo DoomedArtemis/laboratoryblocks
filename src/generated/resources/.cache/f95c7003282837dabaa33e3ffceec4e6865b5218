@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-09T23:56:17.4249936	Block tags
-f21974f84055bb49768b83efad1e6b907f60ede3 data/minecraft/tags/blocks/enchantment_power_provider.json
-f2b017a5219760ee54cbc09f61a3c76ca456b52d data/minecraft/tags/blocks/mineable/axe.json
-76b45cff44678f533784c659a7a999ce73b040d8 data/minecraft/tags/blocks/mineable/pickaxe.json
+// 1.21.1	2024-11-26T22:40:22.801498215	Block tags
+f21974f84055bb49768b83efad1e6b907f60ede3 data/minecraft/tags/block/enchantment_power_provider.json
+f2b017a5219760ee54cbc09f61a3c76ca456b52d data/minecraft/tags/block/mineable/axe.json
+76b45cff44678f533784c659a7a999ce73b040d8 data/minecraft/tags/block/mineable/pickaxe.json

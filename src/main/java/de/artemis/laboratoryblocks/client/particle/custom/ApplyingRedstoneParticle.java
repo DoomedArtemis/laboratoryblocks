@@ -48,6 +48,7 @@ public class ApplyingRedstoneParticle extends TextureSheetParticle {
             this.spriteSet = spriteSet;
         }
 
+        @Override
         public Particle createParticle(@NotNull SimpleParticleType particleType, @NotNull ClientLevel level, double x, double y, double z, double dx, double dy, double dz) {
             ApplyingRedstoneParticle applyingRedstoneParticle = new ApplyingRedstoneParticle(level, x, y, z, this.spriteSet, dx, dy, dz);
             applyingRedstoneParticle.setColor(0.67F, 0.06F, 0.004F);

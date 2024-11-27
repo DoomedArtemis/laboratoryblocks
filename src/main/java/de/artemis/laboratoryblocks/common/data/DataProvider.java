@@ -5,14 +5,14 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = LaboratoryBlocks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = LaboratoryBlocks.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class DataProvider {
 
     @SubscribeEvent
@@ -24,8 +24,8 @@ public class DataProvider {
         generator.addProvider(true, new ModelAndBlockStateProvider(generator.getPackOutput(), existingFileHelper));
         generator.addProvider(true, new ItemModelProvider(generator.getPackOutput(), existingFileHelper));
         generator.addProvider(true, new LanguageProvider(generator.getPackOutput(), "en_us"));
-        generator.addProvider(true, new BlockLootTablesProvider(generator.getPackOutput()));
-        generator.addProvider(true, new RecipesProvider(generator.getPackOutput()));
+        generator.addProvider(true, new BlockLootTablesProvider(generator.getPackOutput(), future));
+        generator.addProvider(true, new RecipesProvider(generator.getPackOutput(), future));
         generator.addProvider(true, new TagsProvider.BlockTagsProvider(generator.getPackOutput(), future, existingFileHelper));
         generator.addProvider(true, new TagsProvider.ItemTagsProvider(generator.getPackOutput(), future, existingFileHelper));
         generator.addProvider(true, new FusionModelProvider(generator.getPackOutput()));

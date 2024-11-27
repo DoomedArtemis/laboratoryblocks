@@ -4,6 +4,7 @@ import de.artemis.laboratoryblocks.LaboratoryBlocks;
 import de.artemis.laboratoryblocks.common.registration.ModBlocks;
 import de.artemis.laboratoryblocks.common.registration.ModTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -12,8 +13,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.file.Path;
@@ -36,13 +36,13 @@ public class TagsProvider {
         }
 
         private ResourceKey<Block> getKey(Block block) {
-            return ForgeRegistries.BLOCKS.getResourceKey(block).get();
+            return BuiltInRegistries.BLOCK.getResourceKey(block).get();
         }
 
         @NotNull
         @Override
         protected Path getPath(ResourceLocation location) {
-            return this.packOutput.getOutputFolder().resolve("data/" + location.getNamespace() + "/tags/blocks/" + location.getPath() + ".json");
+            return this.packOutput.getOutputFolder().resolve("data/" + location.getNamespace() + "/tags/block/" + location.getPath() + ".json");
         }
 
         @NotNull
@@ -66,13 +66,13 @@ public class TagsProvider {
         }
 
         private ResourceKey<Item> getKey(Item item) {
-            return ForgeRegistries.ITEMS.getResourceKey(item).get();
+            return BuiltInRegistries.ITEM.getResourceKey(item).get();
         }
 
         @NotNull
         @Override
         protected Path getPath(ResourceLocation location) {
-            return this.packOutput.getOutputFolder().resolve("data/" + location.getNamespace() + "/tags/items/" + location.getPath() + ".json");
+            return this.packOutput.getOutputFolder().resolve("data/" + location.getNamespace() + "/tags/item/" + location.getPath() + ".json");
         }
 
         @NotNull

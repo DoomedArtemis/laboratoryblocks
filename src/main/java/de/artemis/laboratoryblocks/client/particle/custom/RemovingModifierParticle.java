@@ -48,6 +48,7 @@ public class RemovingModifierParticle extends TextureSheetParticle {
             this.spriteSet = spriteSet;
         }
 
+        @Override
         public Particle createParticle(@NotNull SimpleParticleType particleType, @NotNull ClientLevel level, double x, double y, double z, double dx, double dy, double dz) {
             return new RemovingModifierParticle(level, x, y, z, this.spriteSet, dx, dy, dz);
         }
